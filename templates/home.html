@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ANIKET'S API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>company bankcrupt prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Current Liability to Current Assets" placeholder="Current Liability to Current Assets" required="required" /><br>
+    	<input type="text" name="Working Capital to Total Assets" placeholder="Working Capital to Total Assets" required="required" /><br>
+        <input type="text" name="Working Capital/Equity" placeholder="Working Capital/Equity" required="required" /><br>
+        <input type="text" name="Tax rate (A)" placeholder="Tax rate (A)" required="required" /><br>
+        <input type="text" name="Retained Earnings to Total Assets" placeholder="Retained Earnings to Total Assets" required="required" /><br>
+        <input type="text" name="Net Income to Stockholder's Equity" placeholder="Net Income to Stockholder's Equity" required="required" /><br>
+        <input type="text" name="Net worth/Assets" placeholder="Net worth/Assets" required="required" /><br>
+        <input type="text" name="Cash/Total Assets" placeholder="Cash/Total Assets" required="required" /><br>
+        <input type="text" name="Total expense/Assets" placeholder="Total expense/Assets" required="required" /><br>
+        
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
