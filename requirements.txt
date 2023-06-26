@@ -6,4 +6,3 @@ Flask
 sklearn
 scikit-learn
 imblearn
-gunicorn
